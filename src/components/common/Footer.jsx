@@ -1,14 +1,10 @@
 import React from 'react';
 import LocationTimeIndicator from './LocationTimeIndicator';
 import { Link } from 'react-router-dom';
+import { socials } from '../../data/data';
 
 const Footer = () => {
-    const socials = [
-  { label: 'FB', url: '#facebook' },
-  { label: 'IG', url: '#instagram' },
-  { label: 'IN', url: '#linkedin' },
-  { label: 'DC', url: '#behance' },
-];
+
   return (
     <div className="h-[50vh] bg-black text-white p-6 flex flex-col justify-between font-sans">
       

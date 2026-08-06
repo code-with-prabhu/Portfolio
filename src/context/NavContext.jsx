@@ -1,34 +1,33 @@
-import React, { createContext, useEffect, useState } from 'react'
-import { useLocation } from 'react-router-dom'
+import React, { createContext, useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
-export const NavbarContext = createContext()
-export const NavbarColorContext = createContext()
+export const NavbarContext = createContext();
+export const NavbarImageContext = createContext(); // Renamed for clarity
 
 const NavContext = ({ children }) => {
-
-    const [navColor, setNavColor] = useState('white')
+    const [navOpen, setNavOpen] = useState(false);
     
-    const [navOpen, setNavOpen] = useState(false)
-
-    const locate = useLocation().pathname
-    useEffect(function(){
-        if(locate == '/projects' || locate == '/skills'){
-            setNavColor('black')
-        }else{
-            setNavColor('white')
+    // Store the actual file name you want to use
+    const [navImage, setNavImage] = useState('light.svg'); 
+    const validRoutes = ['/', '/projects', '/skills', '/contact', '/blogs'];
+    const locate = useLocation().pathname;
+    const isNotFoundPage = !validRoutes.includes(locate);
+    useEffect(() => {
+        // Provide the specific SVG file name based on the route
+        if (locate === '/projects' || locate === '/skills' || isNotFoundPage) {
+            setNavImage('image.svg'); 
+        } else {
+            setNavImage('light.svg');
         }
-    },[locate])
+    }, [locate]);
     
-
     return (
-        <div>
-            <NavbarContext.Provider value={[navOpen, setNavOpen]}>
-                <NavbarColorContext.Provider value={[navColor,setNavColor]}>
-                    {children}
-                </NavbarColorContext.Provider>
-            </NavbarContext.Provider>
-        </div>
-    )
+        <NavbarContext.Provider value={[navOpen, setNavOpen]}>
+            <NavbarImageContext.Provider value={[navImage, setNavImage]}>
+                {children}
+            </NavbarImageContext.Provider>
+        </NavbarContext.Provider>
+    );
 }
 
-export default NavContext
+export default NavContext;
