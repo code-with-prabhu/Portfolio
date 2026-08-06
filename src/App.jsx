@@ -5,6 +5,7 @@ import Projects from './pages/Projects'
 import Skills from './pages/Skills'
 import Navbar from './components/Navigation/Navbar'
 import FullScreenNav from './components/Navigation/FullScreenNav'
+import PageNotFound from './components/common/PageNotFound'
 import Contact from './pages/Contact'
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
       <Route path='/projects' element={<Projects/>} />
       <Route path='/skills' element={<Skills/>} />
       <Route path='/contact' element={<Contact/>} />
+      <Route element={<PageNotFound />} path="*" />
     </Routes>
     </>
   )

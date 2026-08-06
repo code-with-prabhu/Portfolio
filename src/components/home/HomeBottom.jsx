@@ -1,26 +1,40 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
 const HomeBottom = () => {
   return (
-    <div className="font-[font2] flex items-center justify-center gap-2 ">
-      <p className="absolute lg:w-[17vw] w-64 lg:right-20 right-0 bottom-5  lg:bottom-30 font-[font1] lg:text-lg text-xs lg:leading-relaxed leading-tight">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        K72 est une agence qui pense chaque action pour nourrir la marque.
-        Demain, dans 5 mois et dans 5 ans. On cherche la friction qui crée
-        l’étincelle pour générer de l’émotion. Pour assurer une relation
-        honnête, on est sans filtre, on dit ce qui doit être dit, on fait ce qui
-        doit être fait.
+    // 1. Made the container relative and used flex-col on mobile to prevent squishing
+    <div className="relative w-full font-[font2] flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-2 px-4 py-8 lg:p-0">
+      
+      {/* 2. Grouped buttons in a flex container so they stay side-by-side on mobile */}
+      <div className="flex items-center justify-center gap-3 w-full lg:w-auto">
+        <div className="lg:border-3 border-2 hover:border-[#D3FD50] hover:text-[#D3FD50] lg:h-25 flex items-center px-6 py-2 lg:pt-1 lg:pb-2 lg:px-14 border-white rounded-full uppercase transition-colors">
+          <Link className="text-xl md:text-2xl lg:text-[6vw] lg:mt-6" to="/projects">
+            Projects
+          </Link>
+        </div>
+        
+        <div className="lg:border-3 border-2 hover:border-[#D3FD50] hover:text-[#D3FD50] lg:h-25 flex items-center px-6 py-2 lg:pt-1 lg:pb-2 lg:px-14 border-white rounded-full uppercase transition-colors">
+          <Link className="text-xl md:text-2xl lg:text-[6vw] lg:mt-6" to="/skills">
+            Skills
+          </Link>
+        </div>
+      </div>
+
+      {/* 3. Made the paragraph 'relative' on mobile to avoid overlap, and 'absolute' on lg */}
+      <p className="relative lg:absolute lg:w-[17vw] w-full max-w-sm lg:max-w-none lg:right-20 lg:bottom-30 font-[font1] lg:text-lg text-sm lg:leading-relaxed leading-tight text-center lg:text-left mt-2 lg:mt-0">
+        
+        {/* 4. Hid the hardcoded spacing on mobile so it doesn't break the centering */}
+        <span className="hidden lg:inline">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </span>
+        I build software with curiosity, creativity, and purpose. I believe the
+        best ideas come from exploring new possibilities, asking questions.
+        Every application I create is designed to be clean, scalable. I value
+        continuous learning, development, and writing code that makes
+        a real difference today.
       </p>
-      <div className="lg:border-3 border-2 hover:border-[#D3FD50] hover:text-[#D3FD50] lg:h-25 flex items-center px-3 pt-1 pb-2 lg:px-14 border-white rounded-full uppercase">
-        <Link className="text-[6vw] lg:mt-6" to="/projects">
-          Projects
-        </Link>
-      </div>
-      <div className="lg:border-3 border-2 hover:border-[#D3FD50] hover:text-[#D3FD50]  lg:h-25 flex items-center px-3 pt-1 pb-2 lg:px-14 border-white rounded-full uppercase">
-        <Link className="text-[6vw] lg:mt-6" to="/skills">
-          Skills
-        </Link>
-      </div>
+      
     </div>
   );
 };

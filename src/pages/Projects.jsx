@@ -3,22 +3,11 @@ import ProjectCard from '../components/project/ProjectCard'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
 import Footer from '../components/common/Footer'
-
+import { projects } from '../data/data'
 
 const Projects = () => {
 
-  const projects = [{
-    image1: 'https://k72.ca/uploads/caseStudies/PJC/Thumbnails/PJC_SiteK72_Thumbnail_1280x960-1280x960.jpg',
-    image2: 'https://k72.ca/uploads/caseStudies/WIDESCAPE/WS---K72.ca---Thumbnail-1280x960.jpg'
-  }, {
-    image1: 'https://k72.ca/uploads/caseStudies/OKA/OKA_thumbnail-1280x960.jpg',
-    image2: 'https://k72.ca/uploads/caseStudies/Opto/thumbnailimage_opto-1280x960.jpg'
-  }, {
-    image1: 'https://k72.ca/uploads/caseStudies/LAMAJEURE_-_Son_sur_mesure/chalaxeur-thumbnail_img-1280x960.jpg',
-    image2: 'https://k72.ca/uploads/caseStudies/SHELTON/thumbnailimage_shelton-1280x960.jpg'
-  }]
-
-
+  // Updated array to include live and github links for both items in the row
   gsap.registerPlugin(ScrollTrigger)
 
   useGSAP(function () {
@@ -38,21 +27,30 @@ const Projects = () => {
 
   return (
     <>
-    <div className='lg:p-4 p-2 mb-[100vh]'>
-      <div className=' pt-[45vh]'>
-        <h2 className='font-[font2] lg:text-[9.5vw] text-7xl uppercase'>Projets</h2>
+      <div className='lg:p-4 p-2 mb-[100vh]'>
+        <div className=' pt-[45vh]'>
+          <h2 className='font-[font2] lg:text-[9.5vw] text-7xl uppercase'>Projets</h2>
+        </div>
+        <div className='-lg:mt-20 lol pb-10'>
+          {projects.map(function (elem, idx) {
+            return (
+              <div key={idx} className='hero w-full lg:h-[550px] mb-4 flex lg:flex-row flex-col lg:gap-4 gap-2'>
+                {/* Passing the new props down to ProjectCard */}
+                <ProjectCard 
+                  image1={elem.image1} 
+                  live1={elem.live1}
+                  github1={elem.github1}
+                  image2={elem.image2} 
+                  live2={elem.live2}
+                  github2={elem.github2}
+                />
+              </div>
+            )
+          })}
+        </div>
       </div>
-      <div className='-lg:mt-20 lol pb-10'>
-        {projects.map(function (elem, idx) {
-          return <div key={idx} className='hero w-full lg:h-[850px] mb-4 flex lg:flex-row flex-col lg:gap-4 gap-2'>
-            <ProjectCard image1={elem.image1} image2={elem.image2} />
-          </div>
-        })}
-      </div>
-    </div>
-    <Footer />
+      <Footer />
     </>
-    
   )
 }
 

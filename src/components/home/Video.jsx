@@ -1,15 +1,15 @@
 import React from "react";
 
-const Video = () => {
+const Video = ({ className = "" }) => {
   return (
     <div className="w-full h-full">
       <video
-        className="w-full h-full object-cover"
+        className={`w-full h-full object-cover ${className}`}
         muted
         loop
         autoPlay
         playsInline
-        src={"./homevid.mp4"}
+        src={"/intro.mp4"}
       />
     </div>
   );
