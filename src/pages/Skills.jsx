@@ -2,6 +2,8 @@ import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
 import { useRef } from 'react'
+import Footer from '../components/common/Footer';
+import LanguageStackSection from '../components/skill/LanguageStackSection';
 
 
 const Skills = () => {
@@ -13,8 +15,8 @@ const Skills = () => {
     gsap.to(imageDivRef.current, {
       scrollTrigger: {
         trigger: imageDivRef.current,
-        start: 'top 0%',
-        end: 'top -110%',
+        start: 'top -15%',
+        end: 'top -130%',
         pin: true,
         pinSpacing: true,
         pinReparent: true,
@@ -54,7 +56,57 @@ const Skills = () => {
     </div>
       </div>
       <div id='page2' className='h-screen'>
+          <div className="w-full bg-white text-black px-6 py-16 md:px-12 lg:px-24 lg:py-32 font-sans">
+      
+      {/* --- TOP SECTION: EXPERTISE LIST --- */}
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-0 mb-24 lg:mb-48">
+        
+        {/* Label */}
+        <div className="md:col-span-5 lg:col-span-4">
+          <h2 className="text-xl lg:text-2xl font-semibold font-[font2] tracking-tight">
+            Expertise
+          </h2>
+        </div>
+        
+        {/* List */}
+        <div className="md:col-span-7 lg:col-span-8">
+          <ul className="text-xl lg:text-2xl font-[font2] font-semibold tracking-tight flex flex-col gap-1">
+            <li>WebTech</li>
+            <li>Cloud</li>
+            <li>Programming</li>
+            <li>Gaming</li>
+          </ul>
+        </div>
+        
+      </div>
 
+      {/* --- BOTTOM SECTION: THREE PARAGRAPHS --- */}
+      <div className="font-[font1] grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
+        
+        {/* Column 1: Programming & WebTech */}
+        <div className="text-lg lg:text-xl font-medium leading-snug tracking-tight pr-4">
+          Our Solutions_ Grounded in advanced programming and cutting-edge web technologies, engineered with precision, and deployed to solve complex digital challenges.
+        </div>
+        
+        {/* Column 2: Cloud */}
+        <div className="text-lg lg:text-xl font-medium leading-snug tracking-tight pr-4">
+          Our Infrastructure_ Built natively in the cloud for absolute scalability. Simmering in a resilient environment where applications can perform seamlessly and come to a full boil.
+        </div>
+        
+        {/* Column 3: Gaming */}
+        <div className="text-lg lg:text-xl font-medium leading-snug tracking-tight pr-4">
+          Our Interactive_ We're open to pushing the boundaries of gaming. Period. The team collaborates to craft immersive worlds and engaging mechanics that make us proud.
+        </div>
+
+      </div>
+
+    </div>
+      </div>
+      <div>
+        <LanguageStackSection/>
+      </div>
+      <div id='page4' className='h-1/2'>
+          <Footer/>
       </div>
     </div>
   );

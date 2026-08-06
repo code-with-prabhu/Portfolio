@@ -11,13 +11,14 @@
 }
 
 .moveX{
+    flex-shrink: 0;
     animation-name: moveAnimation;
     animation-duration: 10s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
 
-.moveLink{
+.moveLink{  
     opacity: 0;
     transition: all ease 0.3s;
 }

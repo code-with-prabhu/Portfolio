@@ -5,6 +5,7 @@ import Projects from './pages/Projects'
 import Skills from './pages/Skills'
 import Navbar from './components/Navigation/Navbar'
 import FullScreenNav from './components/Navigation/FullScreenNav'
+import Contact from './pages/Contact'
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       <Route path="/" element={<Home />} />
       <Route path='/projects' element={<Projects/>} />
       <Route path='/skills' element={<Skills/>} />
+      <Route path='/contact' element={<Contact/>} />
     </Routes>
     </>
   )

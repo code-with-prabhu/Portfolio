@@ -2,6 +2,7 @@ import React from 'react'
 import Video from '../components/home/Video'
 import HomeHero from '../components/home/HomeHero'
 import HomeBottom from '../components/home/HomeBottom'
+import LocationTimeIndicator from '../components/common/LocationTimeIndicator'
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
         <HomeHero />
         <HomeBottom />
       </div>
+      <LocationTimeIndicator />
     </div>
   )
 }
