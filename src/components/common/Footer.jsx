@@ -4,15 +4,16 @@ import { Link } from 'react-router-dom';
 import { socials } from '../../data/data';
 
 const Footer = () => {
-
   return (
-    <div className="h-[50vh] bg-black text-white p-6 flex flex-col justify-between font-sans">
+    <div className="min-h-[50vh] bg-black text-white p-6 flex flex-col justify-between font-sans">
       
       {/* --- TOP SECTION --- */}
-      <div className="flex justify-between items-start">
+      {/* Changed to flex-col on mobile, flex-row on medium screens and up. Added gap for spacing when stacked. */}
+      <div className="flex flex-col md:flex-row justify-between items-start gap-6 md:gap-0">
         
         {/* Top Left: Your Custom Social Links */}
-        <div className="flex items-center gap-2 lg:gap-3">
+        {/* Added flex-wrap just in case a very small screen causes them to squeeze too much */}
+        <div className="flex flex-wrap items-center gap-2 lg:gap-3">
           {socials.map((social) => (
             <a
               key={social.label}
@@ -22,7 +23,7 @@ const Footer = () => {
                 flex items-center justify-center 
                 px-4 py-1.5 lg:px-5 lg:py-2 min-w-12 lg:min-w-14
                 border-[3px] border-white rounded-full 
-                text-white text-base lg:text-2xl font-bold uppercase tracking-wider
+                text-white text-sm sm:text-base lg:text-2xl font-bold uppercase tracking-wider
                 transition-colors duration-300 ease-in-out
                 hover:border-[#D3FD50] hover:text-[#D3FD50]
               "
@@ -36,30 +37,30 @@ const Footer = () => {
         {/* Top Right: Contact */}
         <Link 
           to="/contact" 
-          className="border-[3px] border-white rounded-full px-6 py-2 text-base lg:text-3xl font-bold font-[font2] uppercase tracking-wider flex items-center gap-3 transition-colors duration-300 ease-in-out hover:border-[#D3FD50] hover:text-[#D3FD50]"
+          className="border-[3px] border-white rounded-full px-6 py-2 text-sm sm:text-base lg:text-3xl font-bold font-[font2] uppercase tracking-wider inline-flex items-center gap-3 transition-colors duration-300 ease-in-out hover:border-[#D3FD50] hover:text-[#D3FD50]"
         >
           CONTACT
           {/* Heart Icon */}
-          <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 lg:w-8 lg:h-8">
+          <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8">
             <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
           </svg>
         </Link>
       </div>
     
-
       {/* --- BOTTOM SECTION --- */}
-      <div className="flex justify-between items-end pb-2">
+      {/* Changed to flex-col on mobile, with gap for spacing. Reverts to row layout on medium screens. */}
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 md:gap-0 pb-2 mt-12 md:mt-0">
         
         {/* Bottom Left: Location/Time */}
         <div>
-            <LocationTimeIndicator/>
+            <LocationTimeIndicator />
         </div>
 
-
         {/* Bottom Right: Back to top */}
+        {/* Scaled text size for mobile using text-base md:text-xl lg:text-2xl */}
         <button 
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="text-2xl font-[font2] font-bold  tracking-widest uppercase hover:text-[#D3FD50] transition-colors"
+          className="text-base md:text-xl lg:text-2xl font-[font2] font-bold tracking-widest uppercase hover:text-[#D3FD50] transition-colors"
         >
           Back To Top
         </button>

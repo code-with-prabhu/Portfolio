@@ -6,7 +6,7 @@ export const projects = [
     github1: 'https://github.com/code-with-prabhu/SnapNote',
     name2: 'Portfolio',
     image2: 'https://my-portfolio-resources-v1.s3.ap-south-1.amazonaws.com/Portfolio.jpg',
-    live2: 'https://your-live-link.com',
+    live2: 'https://main.d17m4szon9keov.amplifyapp.com/',
     github2: 'https://github.com/code-with-prabhu/Portfolio'
   }, 
   {

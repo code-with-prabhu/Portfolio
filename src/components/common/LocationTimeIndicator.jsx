@@ -30,7 +30,7 @@ const LocationTimeIndicator = ({
   }, [timeZone]);
 
   return (
-   <div className="font-[font2] fixed bottom-5 left-5 z-50 hidden md:flex items-center gap-2 text-xl md:text-lg lg:text-2xl font-medium text-white select-none pointer-events-none">
+   <div className="font-[font2] fixed bottom-5 left-5 z-50 hidden md:flex items-center gap-2 text-xl md:text-lg lg:text-xl font-medium text-white select-none pointer-events-none">
       {/* Globe SVG */}
       <svg
         className="w-6 h-6 stroke-current fill-none shrink-0"

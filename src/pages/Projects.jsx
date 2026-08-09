@@ -1,13 +1,13 @@
-import { useGSAP } from '@gsap/react'
-import ProjectCard from '../components/project/ProjectCard'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/all'
-import Footer from '../components/common/Footer'
-import { projects } from '../data/data'
+import React from 'react';
+import { useGSAP } from '@gsap/react';
+import ProjectCard from '../components/project/ProjectCard';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/all';
+import Footer from '../components/common/Footer';
+import { projects } from '../data/data';
 
 const Projects = () => {
-
-  gsap.registerPlugin(ScrollTrigger)
+  gsap.registerPlugin(ScrollTrigger);
 
   useGSAP(function () {
     gsap.from('.hero', {
@@ -21,22 +21,22 @@ const Projects = () => {
         end: 'top -150%',
         scrub: true
       }
-    })
-  })
+    });
+  });
 
   return (
     <>
-      {/* REMOVED mb-[100vh] to fix the massive blank space issue */}
+      {/* Removed mb-[100vh] to manage the space dynamically */}
       <div className='lg:p-4 p-2 min-h-screen flex flex-col'>
         <div className='pt-[45vh]'>
           <h2 className='font-[font2] lg:text-[9.5vw] text-7xl uppercase'>Projets</h2>
         </div>
         
-        {/* The container will now naturally hug the bottom of your mapped items */}
-        <div className='-lg:mt-20 lol pb-10 flex-grow'>
+        {/* Added pb-32 so the GSAP scroll trigger has enough natural room to finish without a giant blank page */}
+        <div className='-lg:mt-20 lol pb-32 grow'>
           {projects.map(function (elem, idx) {
             return (
-              <div key={idx} className='hero w-full lg:h-[550px] mb-4 flex lg:flex-row flex-col lg:gap-4 gap-2'>
+              <div key={idx} className='hero w-full lg:h-212.5 h-137.5 mb-4 flex lg:flex-row flex-col lg:gap-4 gap-2'>
                 <ProjectCard 
                   name1={elem.name1}
                   image1={elem.image1} 
@@ -49,14 +49,14 @@ const Projects = () => {
                   github2={elem.github2}
                 />
               </div>
-            )
+            );
           })}
         </div>
       </div>
-      
+
       <Footer />
     </>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;

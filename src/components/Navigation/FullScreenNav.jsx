@@ -116,7 +116,7 @@ const FullScreenNav = () => {
         </div>
         <div className=" py-10">
           <Link to="/projects" className="cursor-pointer" onClick={() => setNavOpen(false)}>
-            <div className="link origin-top overflow-hidden relative border-t-1 border-white">
+            <div className="link origin-top overflow-hidden relative border-t border-white">
               <h1 className="font-[font2] text-4xl lg:text-[6vw] text-center lg:leading-[0.8] lg:pt-10 pt-3 uppercase">
                 Projects
               </h1>
@@ -161,7 +161,7 @@ const FullScreenNav = () => {
             </div>
           </Link>
           <Link to="/skills" className="cursor-pointer" onClick={() => setNavOpen(false)}>
-            <div className="link origin-top overflow-hidden relative border-t-1 border-white">
+            <div className="link origin-top overflow-hidden relative border-t border-white">
               <h1 className="font-[font2] text-4xl lg:text-[6vw] text-center lg:leading-[0.8] lg:pt-10 pt-3 uppercase">
                 Skills
               </h1>
@@ -206,7 +206,7 @@ const FullScreenNav = () => {
             </div>
           </Link>
           <Link to="/contact" className="cursor-pointer" onClick={() => setNavOpen(false)}>
-            <div className="link origin-top overflow-hidden relative border-t-1 border-white">
+            <div className="link origin-top overflow-hidden relative border-t border-white">
               <h1 className="font-[font2] text-4xl lg:text-[6vw] text-center lg:leading-[0.8] lg:pt-10 pt-3 uppercase">
                 Contact
               </h1>
@@ -251,7 +251,7 @@ const FullScreenNav = () => {
             </div>
           </Link>
           <Link to="/blogs" className="cursor-pointer" onClick={() => setNavOpen(false)}>
-            <div className="link origin-top overflow-hidden relative border-y-1 border-white">
+            <div className="link origin-top overflow-hidden relative border-y border-white">
               <h1 className="font-[font2] text-4xl lg:text-[6vw] text-center lg:leading-[0.8] lg:pt-10 pt-3 uppercase">
                 Blogs
               </h1>

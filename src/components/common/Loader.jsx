@@ -47,7 +47,7 @@ const Loader = ({ isLoaded, onComplete }) => {
   return (
     <div 
       ref={loaderRef} 
-      className="fixed inset-0 z-[9999] bg-black text-[#D3FD50] flex flex-col items-center justify-center font-[font2] overflow-hidden"
+      className="fixed inset-0 z-9999 bg-black text-[#D3FD50] flex flex-col items-center justify-center font-[font2] overflow-hidden"
     >
       <div className="overflow-hidden">
         <h1 
@@ -59,7 +59,7 @@ const Loader = ({ isLoaded, onComplete }) => {
       </div>
       
       {/* Optional minimal loading bar */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-48 h-[2px] bg-gray-800">
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-48 h-0.5 bg-gray-800">
         <div 
           className="h-full bg-[#D3FD50] transition-all duration-100 ease-linear"
           style={{ width: `${progress}%` }}
