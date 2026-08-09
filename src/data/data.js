@@ -1,35 +1,29 @@
-// src/data/data.js
-
 export const projects = [
   {
-    image1: 'https://k72.ca/uploads/caseStudies/PJC/Thumbnails/PJC_SiteK72_Thumbnail_1280x960-1280x960.jpg',
-    live1: 'https://your-live-link.com',
-    github1: 'https://github.com/yourusername/repo1',
-    image2: 'https://k72.ca/uploads/caseStudies/WIDESCAPE/WS---K72.ca---Thumbnail-1280x960.jpg',
+    name1: 'SnapNote',
+    image1: 'https://my-portfolio-resources-v1.s3.ap-south-1.amazonaws.com/SnapNote.png',
+    live1: 'https://main.d24v940724q1ze.amplifyapp.com/',
+    github1: 'https://github.com/code-with-prabhu/SnapNote',
+    name2: 'Portfolio',
+    image2: 'https://my-portfolio-resources-v1.s3.ap-south-1.amazonaws.com/Portfolio.jpg',
     live2: 'https://your-live-link.com',
-    github2: 'https://github.com/yourusername/repo2'
+    github2: 'https://github.com/code-with-prabhu/Portfolio'
   }, 
   {
-    image1: 'https://k72.ca/uploads/caseStudies/OKA/OKA_thumbnail-1280x960.jpg',
-    live1: 'https://your-live-link.com',
-    github1: 'https://github.com/yourusername/repo3',
-    image2: 'https://k72.ca/uploads/caseStudies/Opto/thumbnailimage_opto-1280x960.jpg',
-    live2: 'https://your-live-link.com',
-    github2: 'https://github.com/yourusername/repo4'
+    name1: 'Zerodha Clone',
+    image1: 'https://my-portfolio-resources-v1.s3.ap-south-1.amazonaws.com/Zerodha1.png',
+    live1: 'https://zerodha-clone-1-adqq.onrender.com',
+    github1: 'https://github.com/code-with-prabhu/zerodha_clone',
+    name2: 'Kite Dashboard',
+    image2: 'https://my-portfolio-resources-v1.s3.ap-south-1.amazonaws.com/kite-connect-logo-2-1.png',
+    live2: 'https://zerodha-dashboard-xkcw.onrender.com',
+    github2: 'https://github.com/code-with-prabhu/zerodha_clone/tree/Homepage/Dashboard'
   }, 
-  {
-    image1: 'https://k72.ca/uploads/caseStudies/LAMAJEURE_-_Son_sur_mesure/chalaxeur-thumbnail_img-1280x960.jpg',
-    live1: 'https://your-live-link.com',
-    github1: 'https://github.com/yourusername/repo5',
-    image2: 'https://k72.ca/uploads/caseStudies/SHELTON/thumbnailimage_shelton-1280x960.jpg',
-    live2: 'https://your-live-link.com',
-    github2: 'https://github.com/yourusername/repo6'
-  }
 ];
 
 export const socials = [
-  { label: 'FB', url: '#facebook' },
+  { label: 'FB', url: '/error' },
   { label: 'IG', url: 'https://www.instagram.com/prabhu_5.dev/' },
   { label: 'IN', url: 'https://www.linkedin.com/in/prabhudatta-rout-5ar' },
-  { label: 'DC', url: '#behance' },
+  { label: 'GH', url: 'https://github.com/code-with-prabhu/' },
 ];
