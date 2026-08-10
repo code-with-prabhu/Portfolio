@@ -114,7 +114,7 @@ const FullScreenNav = () => {
             <div className="lg:h-28 h-16 lg:w-1 w-0.5 right-0 rotate-45 origin-top absolute bg-[#D3FD50]"></div>
           </div>
         </div>
-        <div className=" py-10">
+        <div className=" py-6">
           <Link to="/projects" className="cursor-pointer" onClick={() => setNavOpen(false)}>
             <div className="link origin-top overflow-hidden relative border-t border-white">
               <h1 className="font-[font2] text-4xl lg:text-[6vw] text-center lg:leading-[0.8] lg:pt-10 pt-3 uppercase">
