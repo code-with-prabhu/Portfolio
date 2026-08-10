@@ -23,7 +23,7 @@ export const projects = [
 
 export const socials = [
   { label: 'FB', url: '/error' },
-  { label: 'IG', url: 'https://www.instagram.com/prabhu_5.dev/' },
+  { label: 'IG', url: 'https://www.instagram.com/ig._.prabhu/' },
   { label: 'IN', url: 'https://www.linkedin.com/in/prabhudatta-rout-5ar' },
   { label: 'GH', url: 'https://github.com/code-with-prabhu/' },
 ];
