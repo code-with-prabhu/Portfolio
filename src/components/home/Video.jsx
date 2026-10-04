@@ -9,7 +9,7 @@ const Video = ({ className = "" }) => {
         loop
         autoPlay
         playsInline
-        src={"https://my-portfolio-resources-v1.s3.ap-south-1.amazonaws.com/bgin.mp4"}
+        src={"https://my-portfolio-assets-v1.s3.eu-north-1.amazonaws.com/BG_Portfolio.mp4"}
       />
     </div>
   );
