@@ -8,6 +8,8 @@ import FullScreenNav from './components/Navigation/FullScreenNav'
 import PageNotFound from './components/common/PageNotFound'
 import Contact from './pages/Contact'
 import Loader from './components/common/Loader'
+import BlogList from './pages/BlogList'
+import BlogPost from './pages/BlogPost'
 
 const App = () => {
   const [isAppLoaded, setIsAppLoaded] = useState(false);
@@ -45,6 +47,8 @@ const App = () => {
         <Route path='/projects' element={<Projects/>} />
         <Route path='/skills' element={<Skills/>} />
         <Route path='/contact' element={<Contact/>} />
+        <Route path="/blog" element={<BlogList />} />
+        <Route path="/blog/:id" element={<BlogPost />} />
         <Route element={<PageNotFound />} path="*" />
       </Routes>
     </>
