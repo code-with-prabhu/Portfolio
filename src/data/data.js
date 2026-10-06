@@ -2,11 +2,11 @@ export const projects = [
   {
     name1: 'SnapNote',
     image1: 'https://my-portfolio-assets-v1.s3.eu-north-1.amazonaws.com/SnapNote.png',
-    live1: 'https://main.d24v940724q1ze.amplifyapp.com/',
+    live1: 'https://main.d7ogdjkiioczz.amplifyapp.com',
     github1: 'https://github.com/code-with-prabhu/SnapNote',
     name2: 'Portfolio',
     image2: 'https://my-portfolio-assets-v1.s3.eu-north-1.amazonaws.com/Portfolio.jpg',
-    live2: 'https://main.d17m4szon9keov.amplifyapp.com/',
+    live2: 'https://main.d3guz1hehq3l2q.amplifyapp.com/',
     github2: 'https://github.com/code-with-prabhu/Portfolio'
   }, 
   {
